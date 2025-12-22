@@ -1,1 +1,6 @@
+opencv-python
+numpy
+dlib
+ultralytics
+PyQt5
 
