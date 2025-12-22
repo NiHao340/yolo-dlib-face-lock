@@ -26,13 +26,56 @@ yolo-dlib-face-lock/
 ├── requirements.txt       # 依赖环境
 │
 ├── src/                   # 核心代码
-│   ├── main.py            # 程序入口
-│   ├── face_detect.py     # 人脸检测（YOLO）
-│   ├── face_recognize.py  # 人脸识别（dlib）
-│   └── ui.py              # PyQt 界面
+│   ├── main.py            # 程序主入口 (PyQt5 界面启动)
+│   ├── dlib_face.py       # 人脸识别逻辑 (dlib 特征提取)
+│   ├── config.py          # 项目配置文件 (路径、阈值等)
+│   └── worker.py          # 多线程处理逻辑 (解耦界面与算法)
 │
-├── models/                # 模型文件（不直接上传大模型）
+├── models/                # 模型文件
 │   ├── README.md          # 模型下载说明
-│   └── yolov8n.pt
+│   └── yolov8n.pt         # YOLOv8 权重文件
 │
-└── data/                  # 测试数据 / 用户数据
+└── data/                  # 测试数据 / 用户人脸库数据
+```
+
+---
+
+## 🧪 运行环境
+
+- Python 3.8+
+- Windows
+- 推荐使用虚拟环境（venv / conda）
+
+---
+
+## 📦 安装依赖
+- pip install -r requirements.txt
+
+---
+
+## 📥 模型下载说明
+
+- 由于模型文件体积较大，不直接上传到 GitHub。
+- 请按照以下说明下载并放入 models/ 目录：
+- dlib 人脸识别模型
+- shape_predictor_68_face_landmarks.dat
+- dlib_face_recognition_resnet_model_v1.dat
+- 👉 具体下载地址与说明见：
+- models/README.md
+
+---
+
+## ▶️ 运行项目
+- python src/main.py
+- 启动后即可通过图形界面进行人脸识别操作。
+
+---
+
+## ⚠️ 注意事项
+- 首次运行请确认模型路径正确
+- 模型文件未放置会导致程序启动失败
+
+---
+
+## 📄 免责声明
+- 本项目仅用于学习与研究目的，请勿用于任何非法或侵犯隐私的场景。
