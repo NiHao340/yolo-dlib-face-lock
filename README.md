@@ -36,7 +36,8 @@ yolo-dlib-face-lock/
 │   ├── README.md          # 模型下载说明
 │   └── yolov8n.pt         # YOLOv8 权重文件
 │
-└── data/                  # 测试数据 / 用户人脸库数据
+└── data/
+    ├── pwd.txt            # 存储加密密码文件
 ```
 
 ---
